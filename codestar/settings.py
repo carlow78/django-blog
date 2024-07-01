@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
     'blog',
 ]
 
@@ -86,7 +87,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #}
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgresql://django_blog_walkthrough_owner:4C9bOyPWcwNB@ep-still-credit-a28eno9f.eu-central-1.aws.neon.tech/django_blog_walkthrough?sslmode=require"))
+    'default': dj_database_url.parse(os.environ.get('postgresql://django_blog_walkthrough_owner:4C9bOyPWcwNB@ep-still-credit-a28eno9f.eu-central-1.aws.neon.tech/django_blog_walkthrough?sslmode=require'))
 }
 
 # Password validation
