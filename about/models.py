@@ -1,10 +1,9 @@
-from django.db import models
+from django.contrib import admin
+from .models import About
+from django_summernote.admin import SummernoteModelAdmin
 
 
-class About(models.Model):
-    title = models.CharField(max_length=200)
-    updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
+@admin.register(About)
+class AboutAdmin(SummernoteModelAdmin):
 
-    def __str__(self):
-        return self.title
+    summernote_fields = ('content',)
